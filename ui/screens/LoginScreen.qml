@@ -35,7 +35,7 @@ Rectangle {
         } 
 
         Button {
-            id: submitButton
+            id: signInButton
             anchors.horizontalCenter: parent.horizontalCenter
             y: 275
             width: 120
@@ -45,7 +45,5 @@ Rectangle {
             font.family: 'Arial'
             font.bold: true
         }
-         
-
     }
 }
