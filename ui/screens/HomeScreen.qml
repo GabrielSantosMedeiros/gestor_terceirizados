@@ -8,9 +8,20 @@ Rectangle {
     color: '#E0E0E0'
 
     MenuView {
-        anchors.left: parent.left
+        x: 10
+        y: 10
         width: 200
-        height: parent.height
+        height: 673
         color: '#F0F0F0'
+        radius: 15
+    }
+
+    HeaderView {
+        x: 227
+        y: 10
+        width: 1125
+        height: 175
+        color: '#F0F0F0'
+        radius: 15
     }
 }

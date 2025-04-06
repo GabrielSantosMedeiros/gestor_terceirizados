@@ -5,8 +5,7 @@ Rectangle {
     id: menuView
 
     Column {
-        anchors.fill: parent
-        anchors.margins: 20
+        anchors.centerIn: parent
         spacing: 20
 
         Button {
