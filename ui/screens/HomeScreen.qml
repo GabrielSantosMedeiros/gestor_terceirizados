@@ -1,5 +1,4 @@
 import QtQuick 2.15
-import QtQuick.Controls 2.15
 import '../views'
 import '../views/components'
 
@@ -17,7 +16,7 @@ Rectangle {
         radius: 15
     }
 
-    HeaderView {
+    HeaderComponent {
         x: 227
         y: 10
         width: 1125

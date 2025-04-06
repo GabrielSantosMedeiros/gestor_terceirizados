@@ -1,3 +1,6 @@
+from PySide6.QtQml import QQmlApplicationEngine
+
+
 def singleton(cls):
     instances = {}
     def getInstance(*args, **kwargs):
@@ -5,3 +8,9 @@ def singleton(cls):
             instances[cls] = cls(*args, **kwargs)
         return instances[cls]
     return getInstance
+
+
+
+@singleton
+def getQmlEngine():
+    return QQmlApplicationEngine()

@@ -1,5 +1,5 @@
 from PySide6.QtGui import QGuiApplication
-from PySide6.QtQml import QQmlApplicationEngine
+from backend.utils import getQmlEngine
 import sys
 
 
@@ -7,7 +7,7 @@ if __name__ == '__main__':
     
     app = QGuiApplication([])
 
-    engine = QQmlApplicationEngine()
+    engine = getQmlEngine()
     engine.load('ui/main.qml')
 
     if not engine.rootObjects():
