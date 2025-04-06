@@ -11,6 +11,6 @@ ApplicationWindow {
     StackView {
         id: screenStack
         anchors.fill: parent
-        initialItem: LoginScreen {}
+        initialItem: HomeScreen {}
     }
 }
