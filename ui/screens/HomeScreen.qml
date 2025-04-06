@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import '../views'
+import '../views/components'
 
 Rectangle {
     id: homeScreen
@@ -21,6 +22,33 @@ Rectangle {
         y: 10
         width: 1125
         height: 175
+        color: '#F0F0F0'
+        radius: 15
+    }
+
+    DashboardGeneralInformationComponent {
+        x: 227
+        y: 200
+        width: 658
+        height: 270
+        color: '#F0F0F0'
+        radius: 15
+    }
+
+    DashboardPreviewComponent {
+        x: 897
+        y: 200
+        width: 455
+        height: 484
+        color: '#F0F0F0'
+        radius: 15
+    }
+
+    DashboardGraphicComponent {
+        x: 227
+        y: 525
+        width: 657
+        height: 158
         color: '#F0F0F0'
         radius: 15
     }
