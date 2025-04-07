@@ -1,5 +1,4 @@
-from PySide6.QtQml import QQmlApplicationEngine
-
+from PySide6.QtCore import QObject
 
 def singleton(cls):
     instances = {}
@@ -10,7 +9,12 @@ def singleton(cls):
     return getInstance
 
 
-
-@singleton
-def getQmlEngine():
-    return QQmlApplicationEngine()
+def findComponent(current:QObject, targetName:str):
+    
+    if current.objectName() == targetName:
+        return current
+    
+    for child in current.children():
+        result = findComponent(child, targetName)
+        if result:
+            return result

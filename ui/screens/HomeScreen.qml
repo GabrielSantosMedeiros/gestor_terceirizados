@@ -4,6 +4,7 @@ import '../views/components'
 
 Rectangle {
     id: homeScreen
+    objectName: 'homeScreen'
     anchors.fill: parent
     color: '#E0E0E0'
 

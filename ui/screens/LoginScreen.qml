@@ -15,6 +15,7 @@ Rectangle {
 
         TextField {
             id: emailField
+            objectName: 'emailField'
             anchors.horizontalCenter: parent.horizontalCenter
             y: 120
             width: parent.width * 0.8
@@ -25,6 +26,7 @@ Rectangle {
 
         TextField {
             id: passwordField
+            objectName: 'passwordField'
             anchors.horizontalCenter: parent.horizontalCenter
             y: 195
             width: parent.width * 0.8
@@ -36,6 +38,7 @@ Rectangle {
 
         Button {
             id: signInButton
+            objectName: 'signInButton'
             anchors.horizontalCenter: parent.horizontalCenter
             y: 275
             width: 120
@@ -44,6 +47,10 @@ Rectangle {
             font.pixelSize: 20
             font.family: 'Arial'
             font.bold: true
+
+            onClicked: {
+                screenController.signInEvent()
+            }
         }
     }
 }
