@@ -11,6 +11,18 @@ class ScreenController(QObject):
 
     @Slot()
     def signInEvent(self):
-        root = self.engine.rootObjects()[0]
-        email = findComponent(root, 'emailField')
-        password = findComponent(root, 'passwordField')
+        print('ola')
+
+
+class HomeController(QObject):
+    
+    def __init__(self):
+        super().__init__()
+        self.engine = Engine()
+    
+
+    @Slot(str)
+    def changeHeaderTitle(self, new_title:str):
+        header_title = findComponent(self.engine.rootObjects()[0], 'headerTitle')
+        header_title.setProperty('text', new_title)
+    

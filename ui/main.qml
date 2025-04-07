@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import 'screens'
+import 'views/components'
 
 
 ApplicationWindow {
@@ -8,10 +9,10 @@ ApplicationWindow {
     visibility: Window.Maximized
     color: '#E0E0E0'
 
-    StackView {
+    MainStackView {
         id: screenStack
         objectName: 'screenStack'
         anchors.fill: parent
-        initialItem: LoginScreen {}
+        initialItem: HomeScreen {}
     }
 }

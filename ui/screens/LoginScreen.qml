@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import '../views/components'
 
 Rectangle {
     id: loginScreen
@@ -47,7 +48,7 @@ Rectangle {
             font.pixelSize: 20
             font.family: 'Arial'
             font.bold: true
-
+            
             onClicked: {
                 screenController.signInEvent()
             }

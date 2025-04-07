@@ -15,6 +15,10 @@ Rectangle {
             font.family: 'Arial'
             width: 120
             height: 45
+
+            onClicked: {
+                homeController.changeHeaderTitle('DASHBOARD')
+            }
         }
         Button {
             id: menuEmpresas
@@ -23,6 +27,10 @@ Rectangle {
             font.family: 'Arial'
             width: 120
             height: 45
+
+            onClicked: {
+                homeController.changeHeaderTitle('EMPRESAS')
+            }
         }
         Button {
             id: menuVeiculos
@@ -31,6 +39,10 @@ Rectangle {
             font.family: 'Arial'
             width: 120
             height: 45
+
+            onClicked: {
+                homeController.changeHeaderTitle('VEICULOS')
+            }
         }
         Button {
             id: menuFuncionarios
@@ -39,6 +51,10 @@ Rectangle {
             font.family: 'Arial'
             width: 120
             height: 45
+
+            onClicked: {
+                homeController.changeHeaderTitle('FUNCIONARIOS')
+            }
         }
         Button {
             id: menuConfig
