@@ -22,7 +22,42 @@ class HomeController(QObject):
     
 
     @Slot(str)
-    def changeHeaderTitle(self, new_title:str):
+    def activateContent(self, content:str):
         header_title = findComponent(self.engine.rootObjects()[0], 'headerTitle')
-        header_title.setProperty('text', new_title)
-    
+        dashboardGeneralInfo = findComponent(self.engine.rootObjects()[0], 'dashboardGeneralinformationComponent')
+        dashboardPreview = findComponent(self.engine.rootObjects()[0], 'dashboardPreviewComponent')
+        dashboardGraph = findComponent(self.engine.rootObjects()[0], 'dashboardGraphicComponent')
+
+        match content:
+            
+            case 'DASHBOARD':
+                header_title.setProperty('text', content)
+                dashboardGeneralInfo.setProperty('visible', True)
+                dashboardPreview.setProperty('visible', True)
+                dashboardGraph.setProperty('visible', True)
+            
+            case 'EMPRESAS':
+                header_title.setProperty('text', content)
+                dashboardGeneralInfo.setProperty('visible', False)
+                dashboardPreview.setProperty('visible', False)
+                dashboardGraph.setProperty('visible', False)
+            
+            case 'VEICULOS':
+                header_title.setProperty('text', content)
+                dashboardGeneralInfo.setProperty('visible', False)
+                dashboardPreview.setProperty('visible', False)
+                dashboardGraph.setProperty('visible', False)
+
+            case 'FUNCIONARIOS':
+                header_title.setProperty('text', content)
+                dashboardGeneralInfo.setProperty('visible', False)
+                dashboardPreview.setProperty('visible', False)
+                dashboardGraph.setProperty('visible', False)
+
+            case 'CONFIGURAÇÕES':
+                header_title.setProperty('text', content)
+                dashboardGeneralInfo.setProperty('visible', False)
+                dashboardPreview.setProperty('visible', False)
+                dashboardGraph.setProperty('visible', False)
+
+

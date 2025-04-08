@@ -17,7 +17,7 @@ Rectangle {
             height: 45
 
             onClicked: {
-                homeController.changeHeaderTitle('DASHBOARD')
+                homeController.activateContent('DASHBOARD')
             }
         }
         Button {
@@ -29,7 +29,7 @@ Rectangle {
             height: 45
 
             onClicked: {
-                homeController.changeHeaderTitle('EMPRESAS')
+                homeController.activateContent('EMPRESAS')
             }
         }
         Button {
@@ -41,7 +41,7 @@ Rectangle {
             height: 45
 
             onClicked: {
-                homeController.changeHeaderTitle('VEICULOS')
+                homeController.activateContent('VEICULOS')
             }
         }
         Button {
@@ -53,7 +53,7 @@ Rectangle {
             height: 45
 
             onClicked: {
-                homeController.changeHeaderTitle('FUNCIONARIOS')
+                homeController.activateContent('FUNCIONARIOS')
             }
         }
         Button {
@@ -63,6 +63,10 @@ Rectangle {
             font.family: 'Arial'
             width: 120
             height: 45
+
+            onClicked: {
+                homeController.activateContent('CONFIGURAÇÕES')
+            }
         }
     }
 }
